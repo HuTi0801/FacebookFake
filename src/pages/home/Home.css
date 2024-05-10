@@ -1,0 +1,73 @@
+.home-container{
+    display: flex;
+    width: 30%;
+}
+
+/* LEFT HOME */
+.lefthome-container{
+    flex: 3;
+    padding: 10px;
+}
+
+.topleft{
+    margin: 10px 0;
+}
+
+.topleft ul{
+    list-style-type: none;
+}
+
+.topleft ul li{
+    display: flex;
+    padding: 10px 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.topleft ul li .text, .bottomleft .list-page .text{
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: var(--size-l);
+}
+
+.btn-see-more{
+    width: 80%;
+    border: none;
+    background-color: lightgray;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.bottomleft .list-page .image{
+    width: 50px;
+    height: 50px;
+    object-fit: cover; /* tranh anh khong bi vo */
+    border-radius: 8px;
+}
+
+.bottomleft .list-page li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.bottomleft .btn-see-more .text{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.bottomleft .title{
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.bottomleft .title .icon{
+    position: absolute;
+    top: 0;
+    right: 18%;
+} 
+

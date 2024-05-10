@@ -1,0 +1,74 @@
+.sidebar-container{
+    display: contents; 
+    align-items: center; 
+    width: 30%; 
+    height: 100%;
+    flex: 4;
+}
+.sidebar-top{
+    margin: 10px 10px 10px 10px;
+}
+.sidebar-top_profile{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.sidebar-top_profile .profile-name{
+    margin-left: 15px;
+    font-size: var(--size-xl);
+}
+.sidebar-top_communicate{
+
+}
+.sidebar-top_icon{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.sidebar-top_icon .flag-icon{
+    margin-left: 15px;
+    font-size: var(--size-xl);
+}
+.sidebar-top_icon .group-icon{
+    margin-left: 15px;
+    font-size: var(--size-xl);
+}
+.sidebar-top_icon .message-icon{
+    margin-left: 15px;
+    font-size: var(--size-xl);
+}
+.sidebar-top_icon .groups-sharp-icon{
+    margin-left: 15px;
+    font-size: var(--size-xl);
+}
+
+.sidebar-top_icon .arrow-dropdown-icon{
+    margin-left: 15px;
+    font-size: var(--size-xl);
+}
+
+.sidebar-bottom{
+    margin: 10px 10px 10px 10px;
+    border-top:  2px solid rgb(125, 117, 117);
+    width: 20%;
+}
+.sidebar-bottom_content{
+    color: grey;
+    font-size: large;
+    font-weight: bolder;
+    margin-top: 15px;
+}
+.sidebar-bottom_group{
+
+}
+.sidebar-bottom_icon{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.sidebar-bottom_icon .name{
+    margin-left: 15px;
+    font-size: var(--size-xl);
+}

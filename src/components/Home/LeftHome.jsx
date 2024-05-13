@@ -27,22 +27,58 @@ const LeftHome = () => {
       id: 4,
       icon: AccessAlarmIcon,
       class: "Memories",
+    },
+    {
+      id: 5,
+      icon: DragHandleIcon,
+      class: "Memories",
+    },
+    {
+      id: 6,
+      icon: DragHandleIcon,
+      class: "Memories",
     }
   ]
+  const initItem = 4;
+  const lastItem = listItem.length;
+
+  const [dataList, setDataList] = React.useState([]);
+  const [dataPages, setDataPages] = React.useState(LikePages);
+  const [numberList, setNumberList] = React.useState(initItem);
+  const [numberPages, setNumberPages] = React.useState(initItem);
+  React.useEffect(() => {
+    setDataList(listItem.slice(0, numberList));
+    setDataPages(LikePages.slice(0, numberPages));
+  }, [numberList, numberPages]);
+
+  const handleShowPage = () => {
+    setNumberList(lastItem);
+  };
+
+  const handleHidePage = () => {
+    setNumberList(initItem);
+  };
 
   return (
     <div className='lefthome-container'>
       <div className='topleft'>
         <ul>
-          {listItem.map(item => (
+          {dataList.map(item => (
             <li key={item.id}>
               <div className='icon'><item.icon /></div>
               <span className='text'>{item.class}</span>
             </li>
           ))}
         </ul>
-        <button className='btn-see-more'>
-          <span className='text'>See More</span>
+        <button className='btn-see-more' onClick={() => {
+          {
+            numberList == initItem && handleShowPage();
+          }
+          {
+            numberList == lastItem && handleHidePage();
+          }
+        }}>
+          <span className='text'>{numberList === initItem ? "See More" : "Hide"}</span>
           <span className='icon'><ArrowDropDownIcon /></span>
         </button>
       </div>
@@ -54,7 +90,7 @@ const LeftHome = () => {
         <div className='list-page'>
           <ul>
             {
-              LikePages.map((page) => (
+              dataPages.map((page) => (
                 <li key={page.id}>
                   <img src={page.image} className='image'></img>
                   <span className='text'>{page.pageName}</span>
@@ -62,9 +98,16 @@ const LeftHome = () => {
               ))
             }
           </ul>
-          <button className='btn-see-more'>
-            <span className='text'>See More</span>
-            <span className='icon'><ArrowDropDownIcon/></span>
+          <button className='btn-see-more' onClick={() => {
+            {
+              numberPages === initItem && setNumberPages(LikePages.length);
+            }
+            {
+              numberPages === LikePages.length && setNumberPages(initItem);
+            }
+          }}>
+            <span className='text'>{numberPages === initItem ? "See More" : "Hide"}</span>
+            <span className='icon'><ArrowDropDownIcon /></span>
           </button>
         </div>
       </div>

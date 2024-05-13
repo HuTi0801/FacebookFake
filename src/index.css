@@ -8,3 +8,15 @@
     --size-xl: 22px;
     --size-l: 18px;
 }
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #c7ced4;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #0088ff;
+}

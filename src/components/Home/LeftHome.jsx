@@ -4,9 +4,10 @@ import EventIcon from '@mui/icons-material/Event';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import LikePages from "../../data/LikePages.json"
+// import LikePages from "../../data/LikePages.json"
 import DragHandleIcon from '@mui/icons-material/DragHandle';
-const LeftHome = () => {
+
+const LeftHome = ({LikePages}) => {
   const listItem = [
     {
       id: 1,

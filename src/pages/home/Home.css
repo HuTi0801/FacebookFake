@@ -1,11 +1,10 @@
 .home-container{
     display: flex;
-    width: 30%;
+    width: 80%;
 }
 
 /* LEFT HOME */
 .lefthome-container{
-    flex: 3;
     padding: 10px;
     overflow-y: scroll;
     width: 25%;

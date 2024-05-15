@@ -69,7 +69,6 @@ const Header = () => {
 
     //Toán tử ... : copy
     const newList = [...listIcon];
-    console.log(newList);
 
     return (
         <>

@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import listStories from "../../../data/StoriesList.json"
 import Avatar from '@mui/material/Avatar';
-import { Height } from '@mui/icons-material';
-import { borderRadius, color, height, padding } from '@mui/system';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 /*
@@ -28,12 +26,15 @@ const Stories = () => {
     setContainerWidth(parentWidth); //lưu lại độ dài stories-container
     setStoriesWidth(storiesWidth); //lưu lại độ dài stories
     handleScroll(parentWidth, storiesWidth, position);
+
   }, [position]);
   //Đây là các đối số truyền vào hoàn toàn khác vs các biến trong useEffect
   const handleScroll = (containerWidth, storiesWidth, position) => {
-    setLeftButton(position < 0);
-    setRightButton(containerWidth - position < storiesWidth);
+    setLeftButton(position < 0); //true false
+    setRightButton(containerWidth - position <= storiesWidth); //false
   };
+  //storiesWidth: 737 , containerWidth: 737, position: -100 => 737 - (-100) = 837
+
   const handleScrollLeft = () => {
     setPosition(prev => prev + space)
   }
@@ -63,6 +64,7 @@ const Stories = () => {
           <ArrowBackIosIcon />
         </div>
       )}
+    
 
       {showRightButton && (
         <div className="scroll-button right" onClick={handleScrollRight}>

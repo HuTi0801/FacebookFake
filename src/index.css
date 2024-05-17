@@ -7,6 +7,8 @@
     --primary-color: #0088ff; /* set mau chinh*/
     --size-xl: 22px;
     --size-l: 18px;
+    --background-color: aliceblue;
+    --border-color: aliceblue;
 }
 
 ::-webkit-scrollbar{

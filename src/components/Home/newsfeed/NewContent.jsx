@@ -37,19 +37,20 @@ const NewContent = () => {
       setData(removePeopleLike);
     }
   }
-  //------------------------------------DEMO 02-------------------------------------
-  const handleComment = (id) => {
-    NewsPost.map(post => {
-      if(post.id === id){
-        const userComment = {
-          id: "abc",
-          username: "Duc Hai",
-          comment: inputComment, 
-          avatar: "https://www.vietnamworks.com/hrinsider/wp-content/uploads/2023/12/anh-den-ngau-012.jpg"
-        }
-      }
-    })
-  }
+  //------------------------------------DEMO 03 - 04 -------------------------------------
+  // const handleComment = (id) => {
+  //   NewsPost.map(post => {
+  //     if(post.id === id){
+  //       const userComment = {
+  //         id: "abc",
+  //         username: "Duc Hai",
+  //         comment: inputComment, 
+  //         avatar: "https://www.vietnamworks.com/hrinsider/wp-content/uploads/2023/12/anh-den-ngau-012.jpg"
+  //       }
+  //     }
+  //   })
+  // }
+  const demo = []
   const listButton = [
     {
       id: 1,

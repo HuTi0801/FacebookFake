@@ -50,7 +50,7 @@ const NewContent = () => {
   //     }
   //   })
   // }
-  const demo = [];
+  const demo = []
   const listButton = [
     {
       id: 1,

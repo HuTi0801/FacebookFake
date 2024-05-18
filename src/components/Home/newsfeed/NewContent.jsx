@@ -37,7 +37,7 @@ const NewContent = () => {
       setData(removePeopleLike);
     }
   }
-  //------------------------------------DEMO-------------------------------------
+  //------------------------------------DEMO 03 - 04 -------------------------------------
   // const handleComment = (id) => {
   //   NewsPost.map(post => {
   //     if(post.id === id){
@@ -50,6 +50,7 @@ const NewContent = () => {
   //     }
   //   })
   // }
+  const demo = [];
   const listButton = [
     {
       id: 1,
